@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <style>
+        li{
+            width: 80px;
+            text-align: center;
+            padding: 10px;
+            
+        }
+    </style>
+    <title>Desafio 06</title>
+
+</head>
+
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+    <button id="proximo">Próximo</button>
+    <script>
+        let atual = document.querySelector('li')
+        let proximo = document.querySelector('#proximo')
+        atual.style.backgroundColor = 'orange'
+        proximo.addEventListener('click', () => {
+            atual.style.backgroundColor = 'white'
+
+            atual = atual.nextElementSibling
+            if (atual == null) {
+                atual.document.querySelector('li')
+            }
+            atual.style.backgroundColor = 'orange'
+        })
+    </script>
+</body>
+
+</html>
